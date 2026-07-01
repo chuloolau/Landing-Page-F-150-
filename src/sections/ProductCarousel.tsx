@@ -81,10 +81,10 @@ export default function ProductCarousel() {
                   className="absolute inset-0 w-full h-full object-contain p-3 sm:p-4 transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 transition-transform duration-500 group-hover:-translate-y-1">
-                  <div className="font-display font-bold text-ink tracking-tight text-base sm:text-lg md:text-xl mb-1">
+                  <div className="font-display font-bold text-[#0A0A0A] tracking-tight text-base sm:text-lg md:text-xl mb-1">
                     {p.title}
                   </div>
-                  <div className="text-ink/65 text-xs sm:text-sm leading-snug">
+                  <div className="text-[#0A0A0A]/65 text-xs sm:text-sm leading-snug">
                     {p.subtitle}
                   </div>
                 </div>
