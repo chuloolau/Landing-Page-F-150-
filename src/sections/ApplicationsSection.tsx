@@ -7,21 +7,27 @@ type Application = {
   title: string;
   filename: string;
   objectPosition?: string;
+  ready?: boolean;
 };
 
 const applications: Application[] = [
   {
     title: 'Off road',
-    filename: 'f150-offroad.jpg',
-    objectPosition: '15% 50%',
+    filename: 'Ford-F-150-2025-5.jpg',
+    objectPosition: '50% 60%',
+    ready: true,
   },
   {
     title: 'Campo',
-    filename: 'f150-campo.jpg',
+    filename: '2025_RSF_Build_F-150KingRanch_1.avif',
+    objectPosition: '50% 55%',
+    ready: true,
   },
   {
     title: 'Pick-up',
-    filename: 'f150-pickup.jpg',
+    filename: '7418cba40b574715a05dc8a466b67ad0.jpg',
+    objectPosition: '50% 55%',
+    ready: true,
   },
 ];
 
@@ -77,10 +83,25 @@ export default function ApplicationsSection() {
                 href="#contacto"
                 className="relative block overflow-hidden aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] group cursor-pointer transition-transform duration-500 hover:-translate-y-1"
               >
-                <AssetPlaceholder
-                  filename={app.filename}
-                  className="absolute inset-0 w-full h-full transition-transform duration-[1.4s] ease-out group-hover:scale-110"
-                />
+                {app.ready ? (
+                  <img
+                    src={`/${app.filename}`}
+                    alt={`${app.title} — Aplicación Baratec F-150`}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+                    style={
+                      app.objectPosition
+                        ? { objectPosition: app.objectPosition }
+                        : undefined
+                    }
+                  />
+                ) : (
+                  <AssetPlaceholder
+                    filename={app.filename}
+                    className="absolute inset-0 w-full h-full transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+                  />
+                )}
                 <div
                   className="absolute inset-0 pointer-events-none transition-opacity duration-500"
                   style={{
