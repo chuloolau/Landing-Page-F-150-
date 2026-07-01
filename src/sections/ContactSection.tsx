@@ -68,8 +68,8 @@ export default function ContactSection() {
             >
               <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden flex-shrink-0">
                 <img
-                  src="/tablet-tienda.jpg"
-                  alt="Tienda online Baratec en tablet"
+                  src="/tablet-tienda.f-150.jpeg"
+                  alt="Tienda online Baratec — Kit x4 Amortiguadores F-150 Lariat en tablet"
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
