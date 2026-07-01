@@ -116,6 +116,7 @@ export default function VideoCallout() {
           <video
             ref={videoRef}
             src="/nuevo-video.mp4"
+            poster="/nuevo-video-poster.jpg"
             muted
             loop
             playsInline

@@ -6,18 +6,21 @@ import AssetPlaceholder from '../components/AssetPlaceholder';
 const cases = [
   {
     src: '/f150-azul.mp4',
+    poster: '/f150-azul-poster.jpg',
     label: 'F-150 Azul',
     description: 'Control de recorrido.',
     ready: true,
   },
   {
     src: '/f150-gris.mp4',
+    poster: '/f150-gris-poster.jpg',
     label: 'F-150 Gris',
     description: 'Estabilidad en alta y baja velocidad.',
     ready: true,
   },
   {
     src: '/f150-roja.mp4',
+    poster: undefined,
     label: 'F-150 Roja',
     description: 'Mayor adherencia en condiciones adversas.',
     ready: false,
@@ -26,10 +29,12 @@ const cases = [
 
 function LazyVideo({
   src,
+  poster,
   label,
   ready,
 }: {
   src: string;
+  poster?: string;
   label: string;
   ready: boolean;
 }) {
@@ -77,6 +82,7 @@ function LazyVideo({
       loop
       playsInline
       preload="metadata"
+      poster={poster}
       aria-label={`Video del ${label} con kit Baratec instalado`}
       className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
       style={{
@@ -145,7 +151,12 @@ export default function CasosRealesSection() {
                     '0 1px 0 0 rgba(0,0,0,0.2)';
                 }}
               >
-                <LazyVideo src={c.src} label={c.label} ready={c.ready} />
+                <LazyVideo
+                  src={c.src}
+                  poster={c.poster}
+                  label={c.label}
+                  ready={c.ready}
+                />
                 <div
                   className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-90"
                   style={{

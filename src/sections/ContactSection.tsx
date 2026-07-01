@@ -127,6 +127,7 @@ export default function ContactSection() {
               >
                 <video
                   src="/hero-rotaviva.mp4"
+                  poster="/hero-rotaviva-poster.jpg"
                   autoPlay
                   muted
                   loop
