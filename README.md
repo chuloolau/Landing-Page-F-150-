@@ -22,9 +22,9 @@ El sitio ya compila y navega, pero varias fotos/videos de la F-150 todavía no e
 | `public/f150-offroad.jpg` | Aplicaciones | Categoría "Off road" |
 | `public/f150-campo.jpg` | Aplicaciones | Categoría "Campo" |
 | `public/f150-pickup.jpg` | Aplicaciones | Categoría "Pick-up" |
-| `public/f150-azul.mp4` | Casos reales | Video de instalación — F-150 Azul |
-| `public/f150-gris.mp4` | Casos reales | Video de instalación — F-150 Gris |
 | `public/f150-roja.mp4` | Casos reales | Video de instalación — F-150 Roja |
+
+Ya resueltos: `f150-azul.mp4` y `f150-gris.mp4` (comprimidos a ~2 Mbps/720p con ffmpeg a partir de los archivos originales), y las fotos de kit (`kit-4-amortiguadores.jpg`, `kit-x-amortiguadores-del.jpg`, `kit-x-amortiguadores-tra.jpg`).
 
 Una vez que subas los archivos con esos nombres a `public/`, avisame y hago el swap final de `<AssetPlaceholder />` por `<img>`/`<video>` en:
 `src/sections/BaratecHero.tsx`, `src/sections/ApplicationsSection.tsx`, `src/sections/CasosRealesSection.tsx`.
