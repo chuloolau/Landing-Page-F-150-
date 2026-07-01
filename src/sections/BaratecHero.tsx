@@ -36,7 +36,7 @@ export default function BaratecHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] flex flex-col w-full overflow-hidden bg-white"
+      className="relative min-h-[100svh] flex flex-col w-full overflow-hidden bg-bg"
     >
       <nav className="relative z-20 flex items-center justify-between px-4 sm:px-6 md:px-12 pt-5 sm:pt-6 md:pt-8 gap-3">
         <a href="#" className="flex items-center" aria-label="Baratec — Inicio">
@@ -59,7 +59,7 @@ export default function BaratecHero() {
       <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] w-full">
         <motion.div
           style={reducedMotion ? undefined : { y: contentY }}
-          className="relative flex flex-col items-start justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-10 sm:py-16 lg:py-0 bg-white"
+          className="relative flex flex-col items-start justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-10 sm:py-16 lg:py-0 bg-bg"
         >
           <FadeIn delay={0.25} y={40}>
             <h1

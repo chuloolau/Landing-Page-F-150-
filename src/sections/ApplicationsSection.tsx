@@ -35,7 +35,7 @@ export default function ApplicationsSection() {
   return (
     <section
       id="aplicaciones"
-      className="relative px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-32 bg-white overflow-hidden"
+      className="relative px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-32 bg-bg overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <img
@@ -47,21 +47,21 @@ export default function ApplicationsSection() {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             objectPosition: '50% 55%',
-            opacity: 0.55,
+            opacity: 0.25,
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.65) 18%, rgba(255,255,255,0.20) 38%, rgba(255,255,255,0.20) 62%, rgba(255,255,255,0.75) 82%, rgba(255,255,255,1) 100%)',
+              'linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(10,10,10,0.65) 18%, rgba(10,10,10,0.20) 38%, rgba(10,10,10,0.20) 62%, rgba(10,10,10,0.75) 82%, rgba(10,10,10,1) 100%)',
           }}
         />
         <div
           className="absolute inset-0 opacity-50"
           style={{
             background:
-              'radial-gradient(circle at 85% 50%, rgba(221,226,39,0.10) 0%, rgba(255,255,255,0) 45%)',
+              'radial-gradient(circle at 85% 50%, rgba(221,226,39,0.10) 0%, rgba(10,10,10,0) 45%)',
           }}
         />
       </div>

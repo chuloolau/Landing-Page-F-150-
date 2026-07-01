@@ -45,10 +45,10 @@ export default function StickyNav() {
             : 'pointer-events-none opacity-0 -translate-y-2'
         }`}
         style={{
-          backgroundColor: 'rgba(250,250,247,0.78)',
+          backgroundColor: 'rgba(10,10,10,0.78)',
           backdropFilter: 'blur(16px) saturate(140%)',
           WebkitBackdropFilter: 'blur(16px) saturate(140%)',
-          borderBottom: '1px solid rgba(10,10,11,0.08)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-12 h-16 sm:h-20">

@@ -55,12 +55,12 @@ export default function VideoCallout() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-white overflow-hidden"
+      className="relative w-full bg-bg overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] min-h-[80vh] lg:min-h-screen">
         <motion.div
           style={reducedMotion ? undefined : { y: contentY }}
-          className="relative flex flex-col items-start justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-0 bg-white"
+          className="relative flex flex-col items-start justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-0 bg-bg"
         >
           <FadeIn>
             <div className="flex items-center gap-3 mb-5 sm:mb-6">
@@ -112,7 +112,7 @@ export default function VideoCallout() {
           </FadeIn>
         </motion.div>
 
-        <div className="relative w-full h-[55vh] lg:h-auto flex items-center justify-center bg-white">
+        <div className="relative w-full h-[55vh] lg:h-auto flex items-center justify-center bg-bg-soft">
           <video
             ref={videoRef}
             src="/nuevo-video.mp4"
@@ -123,7 +123,7 @@ export default function VideoCallout() {
             aria-hidden="true"
             className="max-h-[70%] max-w-[85%] sm:max-w-[75%] lg:max-w-[70%] object-contain rounded-2xl"
             style={{
-              boxShadow: '0 30px 80px -20px rgba(10,10,11,0.25)',
+              boxShadow: '0 30px 80px -20px rgba(0,0,0,0.6)',
             }}
           />
         </div>

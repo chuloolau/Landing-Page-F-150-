@@ -76,9 +76,9 @@ export default function MobileMenu({
               transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
               className="absolute top-3 left-3 right-3 rounded-2xl overflow-hidden flex flex-col"
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(10,10,11,0.08)',
-                boxShadow: '0 20px 60px -10px rgba(10,10,11,0.25)',
+                backgroundColor: '#1C1C1C',
+                border: '1px solid rgba(255,255,255,0.08)',
+                boxShadow: '0 20px 60px -10px rgba(0,0,0,0.5)',
               }}
             >
               <div className="flex items-center justify-between px-5 py-4 border-b border-ink/5">
@@ -100,7 +100,7 @@ export default function MobileMenu({
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="px-4 py-4 rounded-xl text-ink font-display font-black uppercase text-lg tracking-[-0.01em] hover:bg-[#DDE227] transition-colors"
+                    className="px-4 py-4 rounded-xl text-ink font-display font-black uppercase text-lg tracking-[-0.01em] hover:bg-[#DDE227] hover:text-[#0A0A0A] transition-colors"
                   >
                     {link.label}
                   </a>

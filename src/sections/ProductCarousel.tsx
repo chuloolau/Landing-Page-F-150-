@@ -57,20 +57,20 @@ export default function ProductCarousel() {
           {PRODUCTS.map((p, i) => (
             <FadeIn key={p.title} delay={i * 0.08}>
               <article
-                className="relative rounded-2xl overflow-hidden bg-white aspect-[4/5] group cursor-pointer transition-all duration-500 hover:-translate-y-1"
+                className="relative rounded-2xl overflow-hidden bg-bg-card aspect-[4/5] group cursor-pointer transition-all duration-500 hover:-translate-y-1"
                 style={{
-                  border: '1px solid rgba(10,10,11,0.08)',
-                  boxShadow: '0 1px 0 0 rgba(10,10,11,0.03)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  boxShadow: '0 1px 0 0 rgba(0,0,0,0.2)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(221,226,39,0.6)';
                   e.currentTarget.style.boxShadow =
-                    '0 18px 40px -16px rgba(10,10,11,0.18), 0 0 0 1px rgba(221,226,39,0.25)';
+                    '0 18px 40px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(221,226,39,0.25)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(10,10,11,0.08)';
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
                   e.currentTarget.style.boxShadow =
-                    '0 1px 0 0 rgba(10,10,11,0.03)';
+                    '0 1px 0 0 rgba(0,0,0,0.2)';
                 }}
               >
                 <img

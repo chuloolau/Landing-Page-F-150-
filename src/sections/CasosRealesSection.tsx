@@ -93,7 +93,7 @@ export default function CasosRealesSection() {
     <section
       id="casos"
       className="relative px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-32"
-      style={{ backgroundColor: '#F2F2EF' }}
+      style={{ backgroundColor: '#161616' }}
     >
       <ParallaxBlock className="max-w-7xl mx-auto" range={50}>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 sm:mb-16 md:mb-20">
@@ -133,16 +133,16 @@ export default function CasosRealesSection() {
               <article
                 className="relative rounded-2xl overflow-hidden aspect-[3/4] sm:aspect-[9/16] group cursor-pointer transition-all duration-500 hover:-translate-y-1"
                 style={{
-                  backgroundColor: '#F2F2EF',
-                  boxShadow: '0 1px 0 0 rgba(10,10,11,0.03)',
+                  backgroundColor: '#1C1C1C',
+                  boxShadow: '0 1px 0 0 rgba(0,0,0,0.2)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow =
-                    '0 18px 40px -16px rgba(10,10,11,0.25), 0 0 0 1px rgba(221,226,39,0.35)';
+                    '0 18px 40px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(221,226,39,0.35)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow =
-                    '0 1px 0 0 rgba(10,10,11,0.03)';
+                    '0 1px 0 0 rgba(0,0,0,0.2)';
                 }}
               >
                 <LazyVideo src={c.src} label={c.label} ready={c.ready} />

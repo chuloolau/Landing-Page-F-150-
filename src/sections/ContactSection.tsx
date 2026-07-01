@@ -14,7 +14,7 @@ export default function ContactSection() {
   return (
     <section
       id="contacto"
-      className="relative px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-32 bg-white"
+      className="relative px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-32 bg-bg"
     >
       <ParallaxBlock className="max-w-7xl mx-auto" range={50}>
         <FadeIn>
@@ -51,19 +51,19 @@ export default function ContactSection() {
               rel="noreferrer noopener"
               className="group relative block rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-1"
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(10,10,11,0.08)',
-                boxShadow: '0 1px 0 0 rgba(10,10,11,0.03)',
+                backgroundColor: '#1C1C1C',
+                border: '1px solid rgba(255,255,255,0.08)',
+                boxShadow: '0 1px 0 0 rgba(0,0,0,0.2)',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(221,226,39,0.5)';
                 e.currentTarget.style.boxShadow =
-                  '0 28px 60px -16px rgba(10,10,11,0.12), 0 0 0 1px rgba(221,226,39,0.30)';
+                  '0 28px 60px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(221,226,39,0.30)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(10,10,11,0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
                 e.currentTarget.style.boxShadow =
-                  '0 1px 0 0 rgba(10,10,11,0.03)';
+                  '0 1px 0 0 rgba(0,0,0,0.2)';
               }}
             >
               <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden flex-shrink-0">
@@ -106,24 +106,24 @@ export default function ContactSection() {
               rel="noreferrer noopener"
               className="group relative block rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-1"
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(10,10,11,0.08)',
-                boxShadow: '0 1px 0 0 rgba(10,10,11,0.03)',
+                backgroundColor: '#1C1C1C',
+                border: '1px solid rgba(255,255,255,0.08)',
+                boxShadow: '0 1px 0 0 rgba(0,0,0,0.2)',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(221,226,39,0.5)';
                 e.currentTarget.style.boxShadow =
-                  '0 28px 60px -16px rgba(10,10,11,0.12), 0 0 0 1px rgba(221,226,39,0.30)';
+                  '0 28px 60px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(221,226,39,0.30)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(10,10,11,0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
                 e.currentTarget.style.boxShadow =
-                  '0 1px 0 0 rgba(10,10,11,0.03)';
+                  '0 1px 0 0 rgba(0,0,0,0.2)';
               }}
             >
               <div
                 className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden flex-shrink-0"
-                style={{ backgroundColor: '#F2F2EF' }}
+                style={{ backgroundColor: '#161616' }}
               >
                 <video
                   src="/hero-rotaviva.mp4"
@@ -143,7 +143,7 @@ export default function ContactSection() {
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background:
-                      'linear-gradient(180deg, rgba(255,255,255,0) 65%, rgba(255,255,255,0.55) 100%)',
+                      'linear-gradient(180deg, rgba(28,28,28,0) 65%, rgba(28,28,28,0.65) 100%)',
                   }}
                 />
               </div>
@@ -176,7 +176,7 @@ export default function ContactSection() {
 
       <footer
         className="max-w-7xl mx-auto mt-16 sm:mt-20 md:mt-28 pt-6 sm:pt-8"
-        style={{ borderTop: '1px solid rgba(10,10,11,0.10)' }}
+        style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 sm:gap-6">
           <div className="flex flex-col gap-3">
