@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import FadeIn from '../components/FadeIn';
 import MobileMenu from '../components/MobileMenu';
-import AssetPlaceholder from '../components/AssetPlaceholder';
 
 const WHATSAPP_HREF =
   'https://wa.me/5493571623675?text=' +
@@ -79,23 +78,24 @@ export default function BaratecHero() {
         </motion.div>
 
         <div className="relative w-full h-[50vh] sm:h-[55vh] lg:h-auto overflow-hidden bg-bg">
-          <motion.div
-            className="absolute inset-0 w-full h-full"
+          <motion.img
+            src="/ford-f-150-lariat-luxury-1225065.jpg"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
             style={
               reducedMotion
-                ? undefined
+                ? { objectPosition: '50% 55%' }
                 : {
+                    objectPosition: '50% 55%',
                     y: imageY,
                     scale: imageScale,
                   }
             }
-          >
-            <AssetPlaceholder
-              filename="hero-f150-barro.jpeg"
-              hint="Foto hero F-150 (misma composición que hero-silverado-barro.jpeg)"
-              className="absolute inset-0 w-full h-full"
-            />
-          </motion.div>
+          />
           <div
             className="absolute inset-0 pointer-events-none"
             style={{

@@ -18,10 +18,9 @@ El sitio ya compila y navega, pero varias fotos/videos de la F-150 todavía no e
 
 | Archivo esperado | Sección | Uso |
 |---|---|---|
-| `public/hero-f150-barro.jpeg` | Hero (portada) | Foto principal, misma composición que `hero-silverado-barro.jpeg` del sitio Z-71 |
 | `public/f150-roja.mp4` | Casos reales | Video de instalación — F-150 Roja |
 
-Ya resueltos: `f150-azul.mp4` y `f150-gris.mp4` (comprimidos a ~2 Mbps/720p con ffmpeg a partir de los archivos originales), las fotos de kit (`kit-4-amortiguadores.jpg`, `kit-x-amortiguadores-del.jpg`, `kit-x-amortiguadores-tra.jpg`), la foto de tienda (`tablet-tienda.f-150.jpeg`) y las 3 fotos de Aplicaciones — `Ford-F-150-2025-5.jpg` (FX4 → Off road), `2025_RSF_Build_F-150KingRanch_1.avif` (King Ranch → Campo) y `7418cba40b574715a05dc8a466b67ad0.jpg` (Platinum → Pick-up).
+Ya resueltos: `f150-azul.mp4` y `f150-gris.mp4` (comprimidos a ~2 Mbps/720p con ffmpeg a partir de los archivos originales), las fotos de kit (`kit-4-amortiguadores.jpg`, `kit-x-amortiguadores-del.jpg`, `kit-x-amortiguadores-tra.jpg`), la foto de tienda (`tablet-tienda.f-150.jpeg`), las 3 fotos de Aplicaciones — `Ford-F-150-2025-5.jpg` (FX4 → Off road), `2025_RSF_Build_F-150KingRanch_1.avif` (King Ranch → Campo) y `7418cba40b574715a05dc8a466b67ad0.jpg` (Platinum → Pick-up) — y la foto hero (`ford-f-150-lariat-luxury-1225065.jpg`, FX4 levantando polvo).
 
 Una vez que subas los archivos con esos nombres a `public/`, avisame y hago el swap final de `<AssetPlaceholder />` por `<img>`/`<video>` en:
 `src/sections/BaratecHero.tsx`, `src/sections/ApplicationsSection.tsx`, `src/sections/CasosRealesSection.tsx`.
