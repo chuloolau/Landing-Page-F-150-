@@ -9,17 +9,17 @@ type Product = {
 
 const PRODUCTS: Product[] = [
   {
-    image: '/kit-completo.jpg',
+    image: '/kit-4-amortiguadores.jpg',
     title: 'Baratec High Performance',
     subtitle: 'Kit completo',
   },
   {
-    image: '/delanteros.jpg',
+    image: '/kit-x-amortiguadores-del.jpg',
     title: 'Delantero',
     subtitle: 'Regulable en altura',
   },
   {
-    image: '/traseros.jpg',
+    image: '/kit-x-amortiguadores-tra.jpg',
     title: 'Trasero',
     subtitle: 'Sin regulación',
   },

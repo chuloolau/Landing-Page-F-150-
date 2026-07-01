@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import FadeIn from '../components/FadeIn';
 import ParallaxBlock from '../components/ParallaxBlock';
 import AssetPlaceholder from '../components/AssetPlaceholder';
@@ -7,25 +8,82 @@ const cases = [
     src: '/f150-azul.mp4',
     label: 'F-150 Azul',
     description: 'Control de recorrido.',
+    ready: true,
   },
   {
     src: '/f150-gris.mp4',
     label: 'F-150 Gris',
     description: 'Estabilidad en alta y baja velocidad.',
+    ready: true,
   },
   {
     src: '/f150-roja.mp4',
     label: 'F-150 Roja',
     description: 'Mayor adherencia en condiciones adversas.',
+    ready: false,
   },
 ];
 
-function LazyVideo({ src, label }: { src: string; label: string }) {
+function LazyVideo({
+  src,
+  label,
+  ready,
+}: {
+  src: string;
+  label: string;
+  ready: boolean;
+}) {
+  const ref = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const playPromise = el.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+              playPromise.catch(() => {
+                /* autoplay rechazado */
+              });
+            }
+          } else {
+            el.pause();
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  if (!ready) {
+    return (
+      <AssetPlaceholder
+        filename={src.replace(/^\//, '')}
+        hint={`Video del ${label} con kit Baratec instalado`}
+        className="absolute inset-0 w-full h-full transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+      />
+    );
+  }
+
   return (
-    <AssetPlaceholder
-      filename={src.replace(/^\//, '')}
-      hint={`Video del ${label} con kit Baratec instalado`}
-      className="absolute inset-0 w-full h-full transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+    <video
+      ref={ref}
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-label={`Video del ${label} con kit Baratec instalado`}
+      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+      style={{
+        transform: 'scale(1.05)',
+        transformOrigin: 'center',
+      }}
+      src={src}
     />
   );
 }
@@ -87,7 +145,7 @@ export default function CasosRealesSection() {
                     '0 1px 0 0 rgba(10,10,11,0.03)';
                 }}
               >
-                <LazyVideo src={c.src} label={c.label} />
+                <LazyVideo src={c.src} label={c.label} ready={c.ready} />
                 <div
                   className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-90"
                   style={{
