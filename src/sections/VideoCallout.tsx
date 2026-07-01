@@ -112,7 +112,7 @@ export default function VideoCallout() {
           </FadeIn>
         </motion.div>
 
-        <div className="relative w-full h-[55vh] lg:h-auto flex items-center justify-center bg-bg-soft">
+        <div className="relative w-full h-[55vh] lg:h-auto flex items-center justify-center bg-bg">
           <video
             ref={videoRef}
             src="/nuevo-video.mp4"
