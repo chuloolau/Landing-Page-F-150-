@@ -25,8 +25,8 @@ const applications: Application[] = [
   },
   {
     title: 'Pick-up',
-    filename: '7418cba40b574715a05dc8a466b67ad0.jpg',
-    objectPosition: '50% 55%',
+    filename: 'f-150-lariat-blanca.jpg',
+    objectPosition: '50% 60%',
     ready: true,
   },
 ];
